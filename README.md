@@ -121,9 +121,33 @@ Please check the dependency requirements in [SAM](https://github.com/facebookres
 The implementation is tested under python 3.9, as well as pytorch 1.10 and torchvision 0.11. **We recommend equivalent or higher pytorch version**.
 
 Use the `install.sh` to install the necessary libs for SAM-Track
-```
+```bash
 bash script/install.sh
 ```
+
+## SAM2 Simplified Pipeline
+
+This repository provides lightweight examples using [SAM2](https://github.com/facebookresearch/sam2).
+
+1. Install dependencies and SAM2:
+
+```bash
+bash script/install.sh
+```
+
+2. Run the Python pipeline on a video file:
+
+```bash
+python sam2_simple_pipeline.py your_video.mp4 --output_dir ./sam2_results
+```
+
+3. Alternatively use the convenience script:
+
+```bash
+bash script/run_sam2_vlm.sh your_video.mp4 ./sam2_results
+```
+
+Both scripts segment each frame, track instances across time, and query a VLM to obtain the instance name, the action it is performing, and a short scene description.
 
 ### :star:Model Preparation
 Download SAM model to ckpt, the default model is SAM-VIT-B ([sam_vit_b_01ec64.pth](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth)).
