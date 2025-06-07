@@ -1,0 +1,11 @@
+# Dependencies for running SAM2 simplified pipeline
+# Use Python 3.9 or newer
+numpy
+opencv-python
+pillow==9.2.0
+pycocotools
+torch
+transformers
+torchvision
+sam2 @ git+https://github.com/facebookresearch/sam2.git
+tqdm

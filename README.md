@@ -129,10 +129,12 @@ bash script/install.sh
 
 This repository provides lightweight examples using [SAM2](https://github.com/facebookresearch/sam2).
 
-1. Install dependencies and SAM2:
+1. Install dependencies and SAM2. You can use the install script or pip:
 
 ```bash
-bash script/install.sh
+bash script/install.sh               # full environment
+# or install minimal requirements
+pip install -r sam2_requirements.txt
 ```
 
 2. Run the Python pipeline on a video file:
