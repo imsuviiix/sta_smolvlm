@@ -2,6 +2,9 @@
 cd sam; pip install -e .
 cd -
 
+# Install SAM2 (experimental)
+pip install git+https://github.com/facebookresearch/sam2.git
+
 # Install Grounding-Dino
 pip install -e git+https://github.com/IDEA-Research/GroundingDINO.git@main#egg=GroundingDINO
 
